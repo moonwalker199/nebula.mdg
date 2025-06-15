@@ -47,6 +47,10 @@ Create a `requirements.txt` file and install all dependencies:
 transformers
 gradio
 torch
+shutil
+time
+logging
+
 pip install -r requirements.txt
 ```
 
