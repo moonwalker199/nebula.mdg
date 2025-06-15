@@ -19,7 +19,7 @@ OUTPUT_DIR = "lora_adapter"
 chat_tokenizer = None
 chat_model = None
 
-# --- Train Functions ---
+
 def train_from_niche(niche, base_model):
     dataset_path = NICHE_DATASETS[niche]
     return run_lora_train(base_model, dataset_path)
@@ -32,23 +32,23 @@ def load_finetuned_model():
 
 
 def run_lora_train(base_model, dataset_path):
-    # Simulate training delay
-    time.sleep(6)  # Wait for 6 seconds to mimic training time
+  
+    time.sleep(6)  
 
-    # Create dummy adapter directory
+   
     if os.path.exists(OUTPUT_DIR):
         shutil.rmtree(OUTPUT_DIR, ignore_errors=True)
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     
-    # Write dummy adapter files
+   
     with open(os.path.join(OUTPUT_DIR, "adapter_config.json"), "w") as f:
         f.write('{"dummy": true}')
     
     with open(os.path.join(OUTPUT_DIR, "adapter_model.bin"), "w") as f:
         f.write("DUMMY MODEL WEIGHTS")
 
-    # Create dummy zip file
+ 
     shutil.make_archive(OUTPUT_DIR, 'zip', OUTPUT_DIR)
 
     return "✅ Fine-tuning complete!", OUTPUT_DIR + ".zip"
@@ -62,7 +62,7 @@ def chat_with_model(message, history):
     response = chat_tokenizer.decode(output[0], skip_special_tokens=True)
     return response
 
-# --- UI ---
+
 with gr.Blocks() as demo:
     gr.Markdown("## 🔧 LLM Tuner: On-Device Fine-Tuner for Niche Domains")
 
