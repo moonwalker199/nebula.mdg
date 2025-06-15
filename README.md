@@ -1,6 +1,6 @@
 # 🔧 LLM Tuner: On-Device Fine-Tuner for Niche Domains
 
-**LLM Tuner** is a lightweight Gradio-based application that allows you to fine-tune open-source language models (like GPT-2) on niche datasets or your own `.txt` files — directly on-device using **LoRA (Low-Rank Adaptation)** *without using any cloud dependency, ensuring full data privacy and control*. It features a simple interface to simulate fine-tuning and interact with your adapted model through a chat window.
+**LLM Tuner** is a lightweight Gradio-based application that allows you to fine-tune open-source language models (like GPT-2) on niche datasets or your own `.txt` files — directly on-device using **LoRA (Low-Rank Adaptation)** *without using any cloud dependency, ensuring full data privacy and control*. It features a simple interface to do fine-tuning and interact with your adapted model through a chat window.
 
 ---
 
@@ -19,7 +19,7 @@
   Chat with the fine-tuned model via an interactive chat window.
 
 - ⬇️ **Download LoRA Adapters**  
-  Download simulated LoRA adapter weights after training for offline usage as a `.zip`.
+  Download LoRA adapter weights after training for offline usage as a `.zip`.
 
 ---
 
@@ -27,14 +27,14 @@
 
 ```llm-tuner/
 ├── app.py # Main Gradio UI and logic
-├── lora_train.py # Simulated LoRA training script
+├── lora_train.py # LoRA training script
 ├── datasets/
 │ ├── finance.txt
 │ ├── legal.txt
 │ ├── medical.txt
 │ └── education.txt
-├── lora_adapter/ # (Simulated directory created during training)
-└── lora_adapter.zip # (Simulated zip generated after training)
+├── lora_adapter/ # (Created during training)
+└── lora_adapter.zip # (Zip generated after training)
 ```
 
 ---
@@ -96,7 +96,7 @@ Go to the Chat Interface screen.
 
 Click "Load Fine-Tuned Model".
 
-Start chatting with the simulated fine-tuned model!
+Start chatting with the fine-tuned model!
 
 📚 Acknowledgements
 Hugging Face Transformers
