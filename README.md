@@ -78,7 +78,7 @@ Click on "Train".
 
 Wait a few seconds, fine-tuning will complete.
 
-Download the LoRA adapter
+Download the LoRA adapter for offline usage.
 
 Option 2: Upload Custom Dataset
 Click "Upload Custom Dataset (.txt)".
