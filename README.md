@@ -1,6 +1,6 @@
 # 🔧 LLM Tuner: On-Device Fine-Tuner for Niche Domains
 
-**LLM Tuner** is a lightweight Gradio-based application that allows you to fine-tune open-source language models (like GPT-2) on niche datasets or your own `.txt` files — directly on-device using **LoRA (Low-Rank Adaptation)** *without using any cloud dependency, ensuring full data privacy and control*. It features a simple interface to do fine-tuning and interact with your adapted model through a chat window.
+**LLM Tuner** is a lightweight Gradio-based application that allows you to fine-tune open-source language models (like GPT-2) on niche datasets or your own `.txt` files, directly on-device using **LoRA (Low-Rank Adaptation)** *without using any cloud dependency, ensuring full data privacy and control*. It features a simple interface to do fine-tuning and interact with your adapted model through a chat window.
 
 ---
 
@@ -100,9 +100,8 @@ Start chatting with the fine-tuned model!
 
 📚 Acknowledgements
 Hugging Face Transformers
-
 Gradio UI Framework
-
 LoRA: Low-Rank Adaptation of Large Language Models
 
-🌟 Give it a star on GitHub!
+
+*~by Debangan Sarkar, 23117043 :)*
