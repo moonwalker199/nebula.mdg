@@ -74,11 +74,11 @@ Click "Select Niche Domain Dataset".
 
 Choose a domain and base model (e.g., GPT-2).
 
-Click "Train".
+Click on "Train".
 
-Wait a few seconds — fine-tuning will complete.
+Wait a few seconds, fine-tuning will complete.
 
-Download the LoRA adapter.
+Download the LoRA adapter
 
 Option 2: Upload Custom Dataset
 Click "Upload Custom Dataset (.txt)".
