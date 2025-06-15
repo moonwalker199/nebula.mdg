@@ -7,13 +7,13 @@ import logging
 
 logging.basicConfig(level=logging.INFO)
 
-# Choose model here (you can change this or accept as CLI arg or Gradio input)
-BASE_MODEL = os.getenv("BASE_MODEL", "gpt2")  # fallback to GPT2
+
+BASE_MODEL = os.getenv("BASE_MODEL", "gpt2")  
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 logging.info(f"Using device: {DEVICE}")
 
-# === Dataset Setup ===
+
 def get_dataset():
     data_path = "toy_dataset.txt"
     if os.path.exists(data_path):
@@ -25,14 +25,14 @@ def get_dataset():
             f.write("\n".join(texts))
     return Dataset.from_dict({"text": texts})
 
-# === Tokenization ===
+
 def tokenize_dataset(dataset, tokenizer):
     def tokenize_fn(example):
         return tokenizer(example["text"], truncation=True, padding="max_length", max_length=64)
     return dataset.map(tokenize_fn, batched=True, remove_columns=["text"])
 
 
-# === Training Logic ===
+
 def train_lora_model():
     logging.info(f"Loading model and tokenizer: {BASE_MODEL}")
     tokenizer = AutoTokenizer.from_pretrained(BASE_MODEL)
@@ -92,7 +92,7 @@ def train_lora_model():
     tokenizer.save_pretrained("lora-output")
     logging.info("Training completed and model saved to 'lora-output/'.")
 
-# === Entry Point ===
+
 if __name__ == "__main__":
     logging.info("Starting LoRA training script...")
     train_lora_model()
