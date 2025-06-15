@@ -99,9 +99,9 @@ Click "Load Fine-Tuned Model".
 Start chatting with the fine-tuned model!
 
 📚 Acknowledgements
-Hugging Face Transformers
-Gradio UI Framework
-LoRA: Low-Rank Adaptation of Large Language Models
+Hugging Face Transformers<br>
+Gradio UI Framework<br>
+LoRA: Low-Rank Adaptation of Large Language Models<br>
 
 
 *~by Debangan Sarkar, 23117043 :)*
